@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najah Mahmaud - Fullstack Utvecklare</title>
     <meta name="description" content="Najah Mahmaud - Fullstack JavaScript-utvecklare i Göteborg. Från kundservice till kod."/>
-    <!--TODO: Lägg till favicon-->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,14 +17,13 @@
     <header class="site-header">
         <nav class="navbar" aria-label="Huvudnavigation">
             <a href="#hero" class="logo">
-                <span class="logo-mark">NM</span>
-                <span class="logo-name">Najah Mahmaud</span>
+                <span class="logo-name">Najah <span class="name-highlight">Mahmaud</span></span>
             </a>
 
             <ul class="nav-links" id="navLinks">
                <li><a href="#hero" class="nav-link active">Hem</a></li>
                <li><a href="#about" class="nav-link">Om mig</a></li>
-               <li><a href="#projects" class="nav-link">Projekt</a></li>
+               <li><a href="#projectGrid" class="nav-link">Projekt</a></li>
                <li><a href="#experience" class="nav-link">Erfarenhet</a></li>
                <li><a href="#contact" class="nav-link">Kontakt</a></li>
             </ul>
@@ -41,7 +40,7 @@
         <section id="hero" class="hero">
             <div class="container hero-grid">
                 <div class="hero-text reveal">
-                    <p class="hero-greeting">Hej, jag är Najah ♡</p>
+                    <p class="hero-greeting">Hej, kul att du är här ♡</p>
                     <h1 class="hero-title">Najah Mahmaud</h1>
                     <p class="hero-role">Fullstack JavaScript Utvecklare</p>
                     <p class="hero-desc">
@@ -50,18 +49,18 @@
                     <p class="hero-scribble">Kod, design, problemlösning <br>- det är min grej. ♡</p>
 
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">Se mina projekt</a>
+                        <a href="#projectGrid" class="btn btn-primary">Se mina projekt</a>
                         <a href="#contact" class="btn btn-ghost">Kontakta mig</a>
                     </div>
                 </div>
 
                 <div class="hero-media reveal">
                     <div class="hero-image-frame">
-                       <!-- TODO: Lägg till hero bild
-                       <img src="" alt="Illustration av Najah som sitter vid daotrn och kodar" 
+                       
+                       <img src="assets/images/najah.PNG" alt="Illustration av Najah som sitter vid datorn och kodar" 
                         class="hero-image"
                         onerror="this.parentElement.classList.add('img-missing')"
-                        > -->      
+                        >       
                 </div>
             </div>
         </section>
@@ -84,13 +83,15 @@
                              ofullständig. Det visade sig vara en ganska bra grund för att skriva kod.
                         </p>
 
-                        <p><!-- TODO: Länk till chas academy + upskill--> 
-                            Idag studerar jag Fullstack JavaScript på Chas Academy i Göteborg. Jag är särskilt intresserad av frontend, 
-                            UX/UI och hur design och kod samspelar för att skapa enkla användarupplevelser.
+                        <p>
+                            Idag studerar jag Fullstack JavaScript på <a href="https://chasacademy.se/">Chas Academy</a> i Göteborg. Jag är särskilt intresserad av frontend,
+                            UX/UI och hur design och kod samspelar för att skapa enkla användarupplevelser. <br>
+
                             Tack vare min bakgrund inom försäljning brinner jag även för projektledning i form av Scrum och rollen som 
                             länkar mellan kunden och utvecklingsteamet - att förstå kundens behov och omsätta det i smarta lösningar.
-                            För att bredda min kompetens ytterligare läser jag just nu även en extra upskill-kurs inom cybersäkerhet,
-                            vilket ger mig värdefulla verktyg för att kunna bygga applikationer som är både användarvänliga och helt trygga.   
+                        </p>
+                        <p>
+                            Som en separat kompletterande kurs läser jag <a href="https://chasacademy.se/program/praktisk-it-sakerhet-for-anvandare">Cybersäkerhet</a> på Chas Academy. Jag bygger kompetens inom cyberhot och attackmetoder, riskhantering, IT-säkerhet, incidenthantering, säkerhetskommunikation, compliance och regelverk samt säkerhetsramverk och standarder.
                         </p>
 
                         <p class="about-highlight">
@@ -186,17 +187,46 @@
       <div class="container">
         <p class="section-eyebrow">Erfarenhet</p>
         <h2 class="section-title reveal">Min resa</h2>
- 
         <div class="timeline">
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Jan 2020 – 2025 (studieuppehåll)</span>
+              <span class="timeline-date">2017</span>
+              <h3 class="timeline-title">Gymnasieexamen</h3>
+              <p class="timeline-org">Samhällsorienterande programmet – inriktning Beteendevetenskap</p>
+              <p class="timeline-org">S:t Eriksgymnasium, Stockholm</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2018 – 2019</span>
+              <h3 class="timeline-title">Uppräkningspersonal</h3>
+              <p class="timeline-org"><img src="assets/logos/LoomisLogo.svg" class="timeline-logo" alt="" aria-hidden="true"> Loomis</p>
+              <p class="timeline-role-description">Arbete som uppräkningspersonal.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2018 – 2019</span>
+              <h3 class="timeline-title">Säkerhetskontrollant</h3>
+              <p class="timeline-org"><img src="assets/logos/nokaslogo.png" class="timeline-logo" alt="" aria-hidden="true"> Nokas (numera Avarn) — Arlanda Flygplats, Stockholm</p>
+              <p class="timeline-role-description">Arbete som säkerhetskontrollant på Flygplats.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Jan 2020 – 2025</span>
               <h3 class="timeline-title">Senior Customer Advisor / Ops Customer Expert</h3>
-              <p class="timeline-org">Teleperformance Nordic — uppdrag mot Telia & IKEA</p>
+              <p class="timeline-org"><img src="assets/logos/TPlogo.svg" class="timeline-logo timeline-logo-teleperformance" alt="" aria-hidden="true">Teleperformance Nordic — uppdrag mot <img src="assets/logos/Telialogo.svg" class="timeline-logo" alt="" aria-hidden="true"> &amp; <img src="assets/logos/IKEALogo.svg" class="timeline-logo" alt="" aria-hidden="true"></p>
               <ul class="timeline-list">
                 <li>Arbetsformer: Erfarenhet av kontorsarbete, distansarbete och hybridlösningar</li>
-                <li>Onboarding & Coaching: Ansvarig för introduktion av nyanställda samt coachning för att driva sälj och nå KPI-mål</li>
+                <li>Onboarding &amp; Coaching: Ansvarig för introduktion av nyanställda samt coachning för att driva sälj och nå KPI-mål</li>
                 <li>Resursplanering: Operativt arbete med schemaläggning och optimering av bemanning</li>
                 <li>Omnichannel-kommunikation: Löpande kundhantering via telefoni, chatt och mejl</li>
                 <li>IKEA (Kontor): Kundservice på plats, orderhantering, bokningar, reklamationer samt telefon- och mejlhantering</li>
@@ -204,13 +234,13 @@
               </ul>
             </div>
           </div>
- 
+
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date">2025 – 2027</span>
               <h3 class="timeline-title">Fullstack JavaScript-student</h3>
-              <p class="timeline-org">Chas Academy</p>
+              <p class="timeline-org"><img src="assets/logos/chaslogo.png" class="timeline-logo timeline-logo-chas" alt="" aria-hidden="true"><a href="https://chasacademy.se/">Chas Academy</a></p>
               <ul class="timeline-list">
                 <li>JavaScript</li>
                 <li>TypeScript</li>
@@ -222,23 +252,36 @@
                 <li>Git/GitHub</li>
                 <li>Agila metoder</li>
               </ul>
+              <article class="timeline-course">
+                <span class="timeline-date">Okt 2026 – Feb 2027</span>
+                <h4 class="timeline-course-title"><a href="https://chasacademy.se/program/praktisk-it-sakerhet-for-anvandare">Cybersäkerhet</a></h4>
+                <p class="timeline-org">Chas Academy | Kompletterande kurs</p>
+                <p class="timeline-course-description">Jag läser kursen och bygger kompetens inom:</p>
+                <ul class="timeline-list">
+                  <li>Cyberhot &amp; attackmetoder</li>
+                  <li>Riskhantering</li>
+                  <li>IT-säkerhet</li>
+                  <li>Incidenthantering</li>
+                  <li>Säkerhetskommunikation</li>
+                  <li>Compliance &amp; regelverk</li>
+                  <li>Säkerhetsramverk &amp; standarder</li>
+                </ul>
+              </article>
             </div>
           </div>
         </div>
- 
+
         <div class="quote-card reveal">
           <p class="quote-title">Från kundservice till fullstack</p>
           <p class="quote-text">Jag bytte inte ut problemlösningen.<br>Jag fick bara nya verktyg. ♡</p>
         </div>
       </div>
     </section>
-
     <!---CONTACT--->
     
     <section id="contact" class="contact">
         <div class="container contact-inner reveal">
-            <h2 class="contact-title">Söker du/ni en driven lagspelare,<br>
-            eller vill du bara ta en kopp te?</h2>
+            <h2 class="contact-title">Söker du/ni en driven lagspelare,<br>eller vill du bara ta en kopp te?</h2>
 
                 <p class="contact-text">Jag är öppen för nya möjligheter, 
                 samarbeten och bra samtal.</p>
@@ -252,25 +295,21 @@
     <!---FOOTER--->
 
     <footer class="site-footer">
-        <div class="conatiner footer-grid">
-            <div class="footer-brand">
-                <span class="logo-mark">NM</span>
-            </div>
+        <div class="container footer-grid">
+            <nav class="footer-social" aria-label="Sociala medier">
+                <ul class="footer-links">
+                    <li><a href="https://linkedin.com/in/najah-m-1687072a1" target="_blank" rel="noopener noreferrer"><img src="assets/icons/linkedin.png" alt="" aria-hidden="true">LinkedIn</a></li>
+                    <li><a href="https://github.com/NM-Codes" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github-icon.webp" alt="" aria-hidden="true">GitHub</a></li>
+                </ul>
+            </nav>
 
-            <div>
-                <p class="footer-name">Najah Mahmaud</p>
+            <p class="footer-copyright">© 2026 Najah Mahmaud</p>
+
+            <div class="footer-profile">
+                <p class="footer-name">Najah <span class="name-highlight">Mahmaud</span></p>
                 <p class="footer-role">Fullstack Utvecklare</p>
+                <p class="footer-scribble">"The only way to do great work<br>is to love what you do." — Steve Jobs ♡</p>
             </div>
-        </div>
-
-        <ul class="footer-links"> <!--TODO: Lägg till länkarna-->
-            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-        
-        <div class="footer-meta">
-            <p>© 2026 Najah Mahmaud</p>
-            <p class="footer-scribble">"The only way to do great work<br>is to love what you do." — Steve Jobs ♡</p>
         </div>
     </footer>
 
