@@ -203,6 +203,11 @@ button:focus-visible {
   gap: 10px;
   font-weight: 600;
 }
+
+.logo-monogram {
+  width: 96px;
+  height: auto;
+}
  
 .logo-name {
   font-family: var(--font-display);
@@ -719,10 +724,22 @@ button:focus-visible {
   font-family: var(--font-display);
   font-weight: 500;
 }
+
+.footer-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-monogram {
+  width: 42px;
+  height: auto;
+}
  
 .footer-role {
   color: var(--color-muted);
   font-size: 0.85rem;
+  margin-left: 52px;
 }
  
 .footer-links {
