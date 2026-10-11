@@ -486,7 +486,11 @@ button:focus-visible {
 }
  
 .project-image {
+  display: block;
+  width: 100%;
   aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
   background: linear-gradient(135deg, var(--color-primary-dark), var(--color-bg-alt));
 }
  
