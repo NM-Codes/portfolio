@@ -493,7 +493,7 @@ button:focus-visible {
   object-position: center;
   background: linear-gradient(135deg, var(--color-primary-dark), var(--color-bg-alt));
 }
- 
+
 .ph-1 { background: linear-gradient(135deg, #5a4bd6, #1a2340); }
 .ph-2 { background: linear-gradient(135deg, #f2b48a, #3a2f52); }
 .ph-3 { background: linear-gradient(135deg, #3a4a8f, #10162a); }
