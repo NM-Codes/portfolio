@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najah Mahmaud - Fullstack Utvecklare</title>
+    <title>NM | Portfolio</title>
     <meta name="description" content="Najah Mahmaud - Fullstack JavaScript-utvecklare i Göteborg. Från kundservice till kod."/>
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
- 
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <!----NAVBAR--->
     <header class="site-header">
         <nav class="navbar" aria-label="Huvudnavigation">
-            <a href="#hero" class="logo">
-                <span class="logo-name">Najah <span class="name-highlight">Mahmaud</span></span>
+            <a href="#hero" class="logo" aria-label="Till startsidan – Najah Mahmaud">
+                <img class="logo-monogram" src="assets/images/nm-monogram.png" alt="">
             </a>
 
             <ul class="nav-links" id="navLinks">
@@ -152,7 +151,7 @@
 
         <!---PROJECTS--->
         <section>
-            <!--TODO: Lägg till minst 3 projekt och lägg in bild, titel, beskrivning och länk-->
+
             <div class="container">
                 <p class="section-eyebrow">Projekt</p>
                 <h2 class="section-title reveal">Mina projekt</h2>
@@ -160,20 +159,54 @@
                 <div class="project-grid" id="projectGrid">
 
                     <article class="project-card reveal">
-                        <div class="project-image ph-1" aria-hidden="true"></div>
+                        <img
+                            class="project-image"
+                            src="assets/images/virebo-preview.jpg"
+                            alt="Förhandsvisning av Virebos startsida med fastigheter vid vattnet"
+                            loading="lazy"
+                        >
 
                         <div class="project-body">
-                            <h3 class="project-title">Projekt namn...</h3>
-                            <p class="project-desc">Projekt beskrivning...</p>
+                            <h3 class="project-title">Virebo</h3>
+                            <p class="project-desc">En responsiv fastighetswebbplats med bostadslistningar, tjänster och informationssidor.</p>
 
-                            <ul class="tag-list">
-                                <li class="tag">TECH</li>
-                                <li class="tag">STACK</li>    
+                            <ul class="tag-list" aria-label="Tekniker">
+                                <li class="tag">React</li>
+                                <li class="tag">TypeScript</li>
+                                <li class="tag">Tailwind</li>
+                                <li class="tag">Node.js</li>
+                                <li class="tag">Vite</li>
+
+
                             </ul>
                             <div class="project-links">
-                                <a href="#" class="project-link">LÄNK TILL PROJEKTET</a>
-                                <a href="#" class="project-link">LÄNK TILL GITHUB</a>
+                                <a href="https://nm-codes.github.io/virebo-property/" class="project-link" target="_blank" rel="noopener noreferrer">ÖPPNA DEMO ↗</a>
+                                <a href="https://github.com/NM-Codes/virebo-property" class="project-link" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <img
+                            class="project-image"
+                            src="assets/images/productivity-system-preview.jpg"
+                            alt="Förhandsvisning av produktivitetssystemets Pomodoro-timer"
+                            loading="lazy"
+                        >
 
+                        <div class="project-body">
+                            <h3 class="project-title">Produktivitets system</h3>
+                            <p class="project-desc">Ett produktivitetsverktyg för att planera uppgifter, arbeta i fokuserade Pomodoro-pass och följa upp arbetshistorik och statistik.</p>
+
+                            <ul class="tag-list" aria-label="Tekniker">
+                                <li class="tag">React</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">Vite</li>
+
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://nm-codes.github.io/prod-system/" class="project-link" target="_blank" rel="noopener noreferrer">ÖPPNA DEMO ↗</a>
+                                <a href="https://github.com/NM-Codes/prod-system/tree/dev" class="project-link" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
                             </div>
                         </div>
                     </article>
@@ -249,6 +282,7 @@
                 <li>Node.js</li>
                 <li>MongoDB</li>
                 <li>UX/UI</li>
+                <li>Cybersäkerhet</li>
                 <li>Git/GitHub</li>
                 <li>Agila metoder</li>
               </ul>
@@ -306,7 +340,10 @@
             <p class="footer-copyright">© 2026 Najah Mahmaud</p>
 
             <div class="footer-profile">
-                <p class="footer-name">Najah <span class="name-highlight">Mahmaud</span></p>
+                <div class="footer-name-row">
+                    <img class="footer-monogram" src="assets/images/nm-monogram.png" alt="">
+                    <p class="footer-name">Najah <span class="name-highlight">Mahmaud</span></p>
+                </div>
                 <p class="footer-role">Fullstack Utvecklare</p>
                 <p class="footer-scribble">"The only way to do great work<br>is to love what you do." — Steve Jobs ♡</p>
             </div>

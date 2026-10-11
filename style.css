@@ -203,6 +203,11 @@ button:focus-visible {
   gap: 10px;
   font-weight: 600;
 }
+
+.logo-monogram {
+  width: 96px;
+  height: auto;
+}
  
 .logo-name {
   font-family: var(--font-display);
@@ -486,10 +491,14 @@ button:focus-visible {
 }
  
 .project-image {
+  display: block;
+  width: 100%;
   aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
   background: linear-gradient(135deg, var(--color-primary-dark), var(--color-bg-alt));
 }
- 
+
 .ph-1 { background: linear-gradient(135deg, #5a4bd6, #1a2340); }
 .ph-2 { background: linear-gradient(135deg, #f2b48a, #3a2f52); }
 .ph-3 { background: linear-gradient(135deg, #3a4a8f, #10162a); }
@@ -715,10 +724,22 @@ button:focus-visible {
   font-family: var(--font-display);
   font-weight: 500;
 }
+
+.footer-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-monogram {
+  width: 42px;
+  height: auto;
+}
  
 .footer-role {
   color: var(--color-muted);
   font-size: 0.85rem;
+  margin-left: 52px;
 }
  
 .footer-links {
