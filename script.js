@@ -100,3 +100,57 @@ window.addEventListener("scroll", () => {
   header.style.borderBottomColor =
     window.scrollY > 10 ? "rgba(255,255,255,0.14)" : "rgba(255,255,255,0.08)";
 });
+
+//---  IMAGE CAROUSEL ---
+
+document.querySelectorAll(".project-carousel").forEach((carousel) => {
+
+    const image = carousel.querySelector(".project-image");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
+
+    const images = [
+        {
+            src: "assets/images/seb-first-page.png",
+            alt: "SEB Corporate Banking – Dashboard"
+        },
+        {
+            src: "assets/images/seb-initiator-dash.png",
+            alt: "SEB – Betalningshantering"
+        },
+        {
+            src: "assets/images/seb-bank.png",
+            alt: "SEB – Attestflöde"
+        },
+        {
+            src: "assets/images/seb-attest.png",
+            alt: "SEB – Användarinställningar"
+        },
+        {
+            src: "assets/images/seb-history.png",
+            alt: "SEB – Användarinställningar"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+
+        currentIndex = (index + images.length) % images.length;
+
+        image.src = images[currentIndex].src;
+        image.alt = images[currentIndex].alt;
+
+    }
+
+    // Previous image
+    prevBtn.addEventListener("click", () => {
+        showImage(currentIndex - 1);
+    });
+
+    // Next image
+    nextBtn.addEventListener("click", () => {
+        showImage(currentIndex + 1);
+    });
+
+});

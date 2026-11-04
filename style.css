@@ -556,6 +556,70 @@ button:focus-visible {
 .project-link:hover {
   border-color: var(--color-accent);
 }
+
+
+.project-carousel {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: var(--color-surface);
+}
+
+.project-carousel .project-image {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--color-surface);
+}
+
+/* Navigation buttons */
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(10, 14, 26, 0.75);
+    color: #ffffff;
+
+    font-size: 17px;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+    z-index: 2;
+}
+
+.carousel-btn.prev {
+    left: 12px;
+}
+
+.carousel-btn.next {
+    right: 12px;
+}
+
+.carousel-btn:hover {
+    background: var(--color-primary);
+}
+
+.carousel-btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
  
 /* --- ERFARENHET / TIMELINE --- */
 .timeline {
@@ -901,6 +965,20 @@ button:focus-visible {
   .footer-profile {
     text-align: center;
   }
+
+  .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .carousel-btn.prev {
+        left: 8px;
+    }
+
+    .carousel-btn.next {
+        right: 8px;
+    }
 }
 
 @media (max-width: 340px) {
