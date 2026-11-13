@@ -2,6 +2,7 @@ const translations = window.portfolioTranslations;
 const sectionTargets = {
   home: document.querySelector(".hero"),
   projects: document.querySelector(".projects-section"),
+  development: document.querySelector(".development-section"),
   experience: document.querySelector(".experience-section"),
   about: document.querySelector(".experience-intro"),
   contact: document.querySelector(".contact-section"),
@@ -16,6 +17,10 @@ const languageToggle = document.getElementById("languageToggle");
 const languageMenu = document.getElementById("languageMenu");
 const languageOptions = [...document.querySelectorAll("[data-language-option]")];
 const languageLabel = document.getElementById("languageLabel");
+const developmentVideo = document.getElementById("developmentVideo");
+const developmentVideoPreview = document.getElementById("developmentVideoPreview");
+const developmentVideoPlay = document.getElementById("developmentVideoPlay");
+const developmentVideoStatus = document.getElementById("developmentVideoStatus");
 const cvDownload = document.getElementById("cvDownload");
 const descriptionMeta = document.querySelector('meta[name="description"]');
 const languageForSlug = new Map(
@@ -134,6 +139,18 @@ themeToggle.addEventListener("click", () => {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   window.localStorage.setItem("portfolio-theme", nextTheme);
   setTheme(nextTheme);
+});
+
+developmentVideoPlay.addEventListener("click", () => {
+  developmentVideoPreview.hidden = true;
+  developmentVideo.hidden = false;
+  developmentVideo.play().catch((error) => {
+    console.error("Unable to play the portfolio development video.", error);
+    developmentVideo.hidden = true;
+    developmentVideoPreview.hidden = false;
+    developmentVideoStatus.hidden = false;
+    developmentVideoPlay.focus();
+  });
 });
 
 navLinks.setAttribute("aria-hidden", String(window.innerWidth <= 680));
