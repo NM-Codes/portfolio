@@ -1,455 +1,251 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" data-language="sv" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NM | Portfolio</title>
-    <meta name="description" content="Najah Mahmaud - Fullstack JavaScript-utvecklare i Göteborg. Från kundservice till kod."/>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=1">
+    <meta name="theme-color" content="#f7eee7">
+    <meta name="description" content="Najah Mahmaud – fullstackutvecklare med intresse för UX/UI och genomtänkta digitala lösningar.">
+    <title>ENEM | Hem</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!----NAVBAR--->
     <header class="site-header">
-        <nav class="navbar" aria-label="Huvudnavigation">
-            <a href="#hero" class="logo" aria-label="Till startsidan – Najah Mahmaud">
-                <img class="logo-monogram" src="assets/images/nm-monogram.png" alt="">
+        <nav class="navbar" aria-label="Huvudnavigation" data-i18n-aria-label="mainNavigation">
+            <a href="#hem" class="logo" aria-label="ENEM – Najah Mahmaud, startsida" data-i18n-aria-label="homeLink">
+                <img class="logo-monogram" src="assets/logos/logo-light.png" alt="">
+                <span class="logo-label">ENEM</span>
             </a>
 
             <ul class="nav-links" id="navLinks">
-               <li><a href="#hero" class="nav-link active">Hem</a></li>
-               <li><a href="#about" class="nav-link">Om mig</a></li>
-               <li><a href="#projectGrid" class="nav-link">Projekt</a></li>
-               <li><a href="#experience" class="nav-link">Erfarenhet</a></li>
-               <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li><a href="#hem" class="nav-link active" data-section-key="home" data-i18n="navHome">Hem</a></li>
+                <li><a href="#projekt" class="nav-link" data-section-key="projects" data-i18n="navProjects">Projekt</a></li>
+                <li><a href="#erfarenhet" class="nav-link" data-section-key="experience" data-i18n="navExperience">Erfarenhet</a></li>
+                <li><a href="#om-mig" class="nav-link" data-section-key="about" data-i18n="navAbout">Om mig</a></li>
+                <li><a href="#kontakt" class="nav-link" data-section-key="contact" data-i18n="navContact">Kontakt</a></li>
             </ul>
-            
-            <a href="#contact" class="btn btn-small nav-cta">Ska vi prata?</a>
-            <button class="hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false" aria-controls="navLinks">    
+
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="language-pill" id="languageToggle" type="button" aria-label="Välj språk" data-i18n-aria-label="languageSelectorLabel" aria-expanded="false" aria-controls="languageMenu">
+                        <span aria-hidden="true">🇸🇪</span> <span id="languageLabel">SV</span><span class="language-chevron" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="language-menu" id="languageMenu" role="group" aria-label="Välj språk" data-i18n-aria-label="languageSelectorLabel" hidden>
+                        <button class="language-option" type="button" data-language-option="sv" lang="sv" aria-pressed="true">🇸🇪 Svenska</button>
+                        <button class="language-option" type="button" data-language-option="en" lang="en-GB" aria-pressed="false">🇬🇧 English</button>
+                    </div>
+                </div>
+                <button class="theme-indicator" id="themeToggle" type="button" aria-label="Aktivera mörkt läge" aria-pressed="false" title="Aktivera mörkt läge">
+                    <span aria-hidden="true">☾</span>
+                </button>
+            </div>
+
+            <button class="hamburger" id="hamburger" type="button" aria-label="Öppna meny" data-i18n-aria-label="openMenu" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
     </header>
 
     <main>
-
-        <!---HERO--->
-        <section id="hero" class="hero">
-            <div class="container hero-grid">
-                <div class="hero-text reveal">
-                    <p class="hero-greeting">Hej, kul att du är här ♡</p>
-                    <h1 class="hero-title">Najah Mahmaud</h1>
-                    <p class="hero-role">Fullstack JavaScript Utvecklare</p>
-                    <p class="hero-desc">
-                        Jag bygger moderna, användarvänliga och genomtänkta digitala lösningar - från idé till färdig produkt.
-                    </p>
-                    <p class="hero-scribble">Kod, design, problemlösning <br>- det är min grej. ♡</p>
-
+        <section class="hero" id="hem" data-section="home" aria-labelledby="heroTitle">
+            <div class="container hero-inner">
+                <div class="hero-copy reveal">
+                    <p class="hero-kicker" data-i18n-html="heroKicker">FULLSTACKUTVECKLARE <span>·</span> UX/UI <span>·</span> PRODUKT</p>
+                    <h1 class="hero-title" id="heroTitle" data-i18n-html="heroTitle">Hej, jag är<br>Najah Mahmaud</h1>
+                    <p class="hero-desc" data-i18n="heroDescription">Fullstackutvecklare med passion för att bygga användarvänliga, smarta och värdeskapande digitala lösningar – från idé till verklighet.</p>
+                    <div class="hero-meta" aria-label="Kort om mig" data-i18n-aria-label="heroFacts">
+                        <span data-i18n="location">📍 Sverige, Göteborg</span>
+                        <span class="hero-education"><img src="assets/logos/chaslogo.png" alt=""> <span data-i18n="education">Chas Academy 2025–2027</span></span>
+                        <span class="availability"><i aria-hidden="true"></i> <span data-i18n="availability">Öppen för examensarbete och samarbeten</span></span>
+                    </div>
                     <div class="hero-actions">
-                        <a href="#projectGrid" class="btn btn-primary">Se mina projekt</a>
-                        <a href="#contact" class="btn btn-ghost">Kontakta mig</a>
-                    </div>
-                </div>
-
-                <div class="hero-media reveal">
-                    <div class="hero-image-frame">
-                       
-                       <img src="assets/images/najah.PNG" alt="Illustration av Najah som sitter vid datorn och kodar" 
-                        class="hero-image"
-                        onerror="this.parentElement.classList.add('img-missing')"
-                        >       
-                </div>
-            </div>
-        </section>
-
-        <!---ABOUT--->
-        <section id="about" class="section">
-            <div class="container">
-                <p class="section-eyebrow"> Om mig</p>
-                <h2 class="section-title reveal">En nyfiken person med stora mål</h2>
-
-                <div class="about-grid">
-                    <div class="about-text reveal">
-                        <p>Jag har spenderat flera år med att lösa problem åt människor inom kundservice och försäljning. 
-                            Nu gör jag ungefär samma sak - fast med kod.
-                        </p>
-
-                        <p>Hos Teleperformance, i uppdrag mot Telia och IKEA, mötte jag allt från enkla frågor till riktiga kluriga ärenden
-                             - B2C, B2B, teknisk support, försäljning, administration, allt på distans.
-                             Jag lärde mig att lyssna, strukturera och hitta lösningar även när informationen var röriga eller 
-                             ofullständig. Det visade sig vara en ganska bra grund för att skriva kod.
-                        </p>
-
-                        <p>
-                            Idag studerar jag Fullstack JavaScript på <a href="https://chasacademy.se/">Chas Academy</a> i Göteborg. Jag är särskilt intresserad av frontend,
-                            UX/UI och hur design och kod samspelar för att skapa enkla användarupplevelser. <br>
-
-                            Tack vare min bakgrund inom försäljning brinner jag även för projektledning i form av Scrum och rollen som 
-                            länkar mellan kunden och utvecklingsteamet - att förstå kundens behov och omsätta det i smarta lösningar.
-                        </p>
-                        <p>
-                            Som en separat kompletterande kurs läser jag <a href="https://chasacademy.se/program/praktisk-it-sakerhet-for-anvandare">Cybersäkerhet</a> på Chas Academy. Jag bygger kompetens inom cyberhot och attackmetoder, riskhantering, IT-säkerhet, incidenthantering, säkerhetskommunikation, compliance och regelverk samt säkerhetsramverk och standarder.
-                        </p>
-
-                        <p class="about-highlight">
-                            Från kundservice till fullstack -<br>
-                            samma problemlösning, nya verktyg. ♡
-                        </p>
-                    </div>
-
-                    <div class="about-cards reveal">
-                        <div class="info-card">
-                            <span class="info-number">5+ år</span>
-                            <span class="info-label">Kundservice</span>
-                        </div>
-
-                        <div class="info-card">
-                            <span class="info-number">Fullstack JS</span>
-                            <span class="info-label">Chas Academy</span>
-                        </div>        
-
-                        <div class="info-card">
-                            <span class="info-number">2025-2027</span>
-                            <span class="info-label">Student</span>
-                        </div>
-                        <div class="info-card">
-                            <span class="info-number">Göteborg</span>
-                            <span class="info-label">Sverige</span>
-                        </div>
+                        <a href="assets/documents/Najah_Mahmaud_CV.pdf" id="cvDownload" class="btn btn-primary" download="Najah_Mahmaud_CV.pdf"><span aria-hidden="true">↓</span> <span data-i18n="downloadCv">Ladda ner CV</span></a>
+                        <a href="mailto:najah.mahmoud@hotmail.se" class="btn btn-ghost"><span aria-hidden="true">↗</span> <span data-i18n="contactMe">Kontakta mig</span></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!---TECH STACK--->
-        <section id="stack" class="section section-alt">
+        <section class="projects-section section" id="projekt" data-section="projects" aria-labelledby="projectsTitle">
             <div class="container">
-                <p class="section-eyebrow">Tech stack</p>
-                <h2 class="section-title reveal">Min tech stack</h2>
-                <p class="section-intro reveal">Jag lär mig fortfarande, men det är också
-                    det som är kul.
-                </p>
-                <ul class="pill-grid reveal" id="techStack">
-                    <li class="pill">HTML</li>
-                    <li class="pill">CSS</li>
-                    <li class="pill">JavaScript</li>
-                    <li class="pill">TypeScript</li>
-                    <li class="pill">React</li>
-                    <li class="pill">React Native</li>
-                    <li class="pill">Node.js</li>
-                    <li class="pill">Express</li>
-                    <li class="pill">MongoDB</li>
-                    <li class="pill">Git</li>
-                    <li class="pill">GitHub</li>
-                    <li class="pill">UX/UI</li>
-                    <li class="pill">Figma</li>
+                <div class="section-heading">
+                    <div>
+                        <p class="section-eyebrow" data-i18n="projectsEyebrow">PROJEKT</p>
+                        <h2 class="section-title" id="projectsTitle" data-i18n="projectsTitle">4 projekt</h2>
+                        <p class="section-intro" data-i18n="projectsDescription">Ett urval av projekt där jag kombinerar teknik, UX och problemlösning i praktiken.</p>
+                    </div>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <a class="project-preview" href="https://github.com/chas-challenge-2026/seb-net-team1" target="_blank" rel="noopener noreferrer" aria-label="Visa SEB Corporate Banking på GitHub" data-i18n-aria-label="sebPreview">
+                            <img class="project-image-contain" src="assets/images/seb-first-page.png" alt="SEB Corporate Banking – översikt av betalningar" data-i18n-alt="sebImage" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title" data-i18n="sebTitle">SEB – Företagsbetalningar</h3>
+                                <a class="project-arrow" href="https://github.com/chas-challenge-2026/seb-net-team1" target="_blank" rel="noopener noreferrer" aria-label="Öppna SEB-projektet på GitHub" data-i18n-aria-label="sebLink">↗</a>
+                            </div>
+                            <p class="project-desc" data-i18n="sebDescription">Företagsbank med dashboards, betalningshantering och digitala attestflöden.</p>
+                            <ul class="tag-list" aria-label="Tekniker" data-i18n-aria-label="technologies">
+                                <li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">.NET</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <a class="project-preview" href="https://nm-codes.github.io/virebo-property/" target="_blank" rel="noopener noreferrer" aria-label="Öppna Virebo Property" data-i18n-aria-label="vireboLink">
+                            <img src="assets/images/virebo-preview.jpg" alt="Virebo Property – fastigheter vid vattnet" data-i18n-alt="vireboImage" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title">Virebo Property</h3>
+                                <a class="project-arrow" href="https://nm-codes.github.io/virebo-property/" target="_blank" rel="noopener noreferrer" aria-label="Öppna Virebo Property" data-i18n-aria-label="vireboLink">↗</a>
+                            </div>
+                            <p class="project-desc" data-i18n="vireboDescription">En responsiv fastighetsplattform med bostadslistningar och tjänster.</p>
+                            <ul class="tag-list" aria-label="Tekniker" data-i18n-aria-label="technologies">
+                                <li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Node.js</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <a class="project-preview" href="https://nm-codes.github.io/prod-system/" target="_blank" rel="noopener noreferrer" aria-label="Öppna produktivitetssystemet" data-i18n-aria-label="productivityLink">
+                            <img src="assets/images/productivity-system-preview.jpg" alt="Produktivitetssystem – timer och statistik" data-i18n-alt="productivityImage" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title" data-i18n="productivityTitle">Produktivitetssystem</h3>
+                                <a class="project-arrow" href="https://nm-codes.github.io/prod-system/" target="_blank" rel="noopener noreferrer" aria-label="Öppna produktivitetssystemet" data-i18n-aria-label="productivityLink">↗</a>
+                            </div>
+                            <p class="project-desc" data-i18n="productivityDescription">Planera uppgifter, fokusera med Pomodoro-pass och följ din utveckling.</p>
+                            <ul class="tag-list" aria-label="Tekniker" data-i18n-aria-label="technologies">
+                                <li class="tag">React</li><li class="tag">JavaScript</li><li class="tag">CSS</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <a class="project-preview" href="https://nm-codes.github.io/nexora/inloggning" target="_blank" rel="noopener noreferrer" aria-label="Öppna Nexora" data-i18n-aria-label="nexoraLink">
+                            <img class="project-image-contain" src="assets/images/nexora.png" alt="Nexora – rekryteringsplattformens översikt" data-i18n-alt="nexoraImage" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title">Nexora</h3>
+                                <a class="project-arrow" href="https://nm-codes.github.io/nexora/inloggning" target="_blank" rel="noopener noreferrer" aria-label="Öppna Nexora" data-i18n-aria-label="nexoraLink">↗</a>
+                            </div>
+                            <p class="project-desc" data-i18n="nexoraDescription">Rekryteringsplattform med kandidatflöden och separata arbetsytor.</p>
+                            <ul class="tag-list" aria-label="Tekniker" data-i18n-aria-label="technologies">
+                                <li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Supabase</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-section" aria-labelledby="toolsTitle">
+            <div class="container tools-layout">
+                <div class="tools-copy">
+                    <p class="section-eyebrow" data-i18n="toolsEyebrow">MIN VERKTYGSLÅDA</p>
+                    <h2 class="section-title" id="toolsTitle" data-i18n="toolsTitle">Teknik &amp; verktyg</h2>
+                    <p class="section-intro" data-i18n="toolsDescription">Tekniker jag använder för att bygga moderna och användarvänliga lösningar.</p>
+                </div>
+                <ul class="tool-grid">
+                    <li class="tool-card"><img src="assets/icons/icons8-html-48.png" alt=""><span>HTML</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-css3-48.png" alt=""><span>CSS</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-javascript-48.png" alt=""><span>JavaScript</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-typescript-48.png" alt=""><span>TypeScript</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-react-48.png" alt=""><span>React</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-react-48.png" alt=""><span>React Native</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-tailwind-css-48.png" alt=""><span>Tailwind</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-node-js-48.png" alt=""><span>Node.js</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-express-js-48.png" alt=""><span>Express</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-mongodb-48.png" alt=""><span>MongoDB</span></li>
+                    <li class="tool-card"><img src="assets/icons/icons8-git-48.png" alt=""><span>Git</span></li>
                 </ul>
             </div>
         </section>
 
-        <!---PROJECTS--->
-        <section>
-
-            <div class="container">
-                <p class="section-eyebrow">Projekt</p>
-                <h2 class="section-title reveal">Mina projekt</h2>
-
-                <div class="project-grid" id="projectGrid">
-                    <article class="project-card reveal">
-
-    
-    <div class="project-carousel">
-
-        <img
-            class="project-image"
-            src="assets/images/seb-first-page.png"
-            alt="SEB Corporate Banking – Dashboard"
-            loading="lazy"
-        >
-
-        <button
-            class="carousel-btn prev"
-            type="button"
-            aria-label="Föregående bild"
-        >
-            &#10094;
-        </button>
-
-        <button
-            class="carousel-btn next"
-            type="button"
-            aria-label="Nästa bild"
-        >
-            &#10095;
-        </button>
-
-    </div>
-
-
-    <div class="project-body">
-
-        <h3 class="project-title">SEB – Corporate Banking</h3>
-
-        <p class="project-desc">
-            En fullstacklösning för företagsbank utvecklad i team,
-            med fokus på betalningshantering, rollbaserade dashboards
-            och digitala attestflöden. Lösningen omfattar även
-            batchhantering, IBAN/BIC-validering och säker audit-loggning.
-        </p>
-
-        <ul class="tag-list" aria-label="Tekniker">
-
-            <li class="tag">React</li>
-            <li class="tag">TypeScript</li>
-            <li class="tag">.NET 8</li>
-            <li class="tag">ASP.NET Core</li>
-            <li class="tag">C/C++</li>
-            <li class="tag">Docker</li>
-
-        </ul>
-
-        
-        <div class="project-links">
-
-            <a
-                href="https://github.com/chas-challenge-2026/seb-net-team1"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GITHUB REPO ↗
-            </a>
-
-        </div>
-
-    </div>
-
-</article>
-
-                    <article class="project-card reveal">
-                        <img
-                            class="project-image"
-                            src="assets/images/nexora.png"
-                            alt="Förhandsvisning av Nexoras startsida."
-                            loading="lazy"
-                        >
-
-                        <div class="project-body">
-                            <h3 class="project-title">Nexora</h3>
-                            <p class="project-desc">Nexora är en modern rekryteringsplattform som förenklar hanteringen av kandidater med en Kanban-tavla, jobbannonser och separata arbetsytor för administratörer och kunder. Utvecklad med fokus på användarvänlighet, tydliga arbetsflöden och en professionell enterprise-design.</p>
-
-                            <ul class="tag-list" aria-label="Tekniker">
-                                <li class="tag">React</li>
-                                <li class="tag">TypeScript</li>
-                                <li class="tag">CSS</li>
-                                <li class="tag">Vite</li>
-                                <li class="tag">Supabase</li>
-                                <li class="tag">PostgreSQL</li>
-
-
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://nm-codes.github.io/nexora/inloggning" class="project-link" target="_blank" rel="noopener noreferrer">ÖPPNA DEMO ↗</a>
-                                <a href="https://github.com/NM-Codes/nexora" class="project-link" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <img
-                            class="project-image"
-                            src="assets/images/virebo-preview.jpg"
-                            alt="Förhandsvisning av Virebos startsida med fastigheter vid vattnet"
-                            loading="lazy"
-                        >
-
-                        <div class="project-body">
-                            <h3 class="project-title">Virebo</h3>
-                            <p class="project-desc">En responsiv fastighetswebbplats med bostadslistningar, tjänster och informationssidor.</p>
-
-                            <ul class="tag-list" aria-label="Tekniker">
-                                <li class="tag">React</li>
-                                <li class="tag">TypeScript</li>
-                                <li class="tag">Tailwind</li>
-                                <li class="tag">Node.js</li>
-                                <li class="tag">Vite</li>
-
-
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://nm-codes.github.io/virebo-property/" class="project-link" target="_blank" rel="noopener noreferrer">ÖPPNA DEMO ↗</a>
-                                <a href="https://github.com/NM-Codes/virebo-property" class="project-link" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <img
-                            class="project-image"
-                            src="assets/images/productivity-system-preview.jpg"
-                            alt="Förhandsvisning av produktivitetssystemets Pomodoro-timer"
-                            loading="lazy"
-                        >
-
-                        <div class="project-body">
-                            <h3 class="project-title">Produktivitets system</h3>
-                            <p class="project-desc">Ett produktivitetsverktyg för att planera uppgifter, arbeta i fokuserade Pomodoro-pass och följa upp arbetshistorik och statistik.</p>
-
-                            <ul class="tag-list" aria-label="Tekniker">
-                                <li class="tag">React</li>
-                                <li class="tag">CSS</li>
-                                <li class="tag">JavaScript</li>
-                                <li class="tag">Vite</li>
-
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://nm-codes.github.io/prod-system/" class="project-link" target="_blank" rel="noopener noreferrer">ÖPPNA DEMO ↗</a>
-                                <a href="https://github.com/NM-Codes/prod-system/tree/dev" class="project-link" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
-                            </div>
-                        </div>
-                    </article>
-    
+        <section class="experience-section section" id="erfarenhet" data-section="experience" aria-labelledby="experienceTitle">
+            <div class="container experience-layout">
+                <div class="experience-intro" id="om-mig" data-section="about">
+                    <p class="section-eyebrow" data-i18n="journeyEyebrow">MIN RESA</p>
+                    <h2 class="section-title" id="experienceTitle" data-i18n="experienceTitle">Erfarenhet</h2>
+                    <p class="section-intro" data-i18n="experienceDescription">En kombination av kundnära erfarenhet, problemlösning och digital utveckling.</p>
+                    <details class="about-details">
+                        <summary data-i18n="aboutSummary">Lite mer om mig</summary>
+                        <p data-i18n="aboutParagraphOne">Efter flera år inom kundservice och försäljning studerar jag nu Fullstack JavaScript på Chas Academy. Jag tycker särskilt om frontend, UX/UI och att omsätta kunders behov till tydliga digitala lösningar.</p>
+                        <p data-i18n="aboutParagraphTwo">Jag läser också en kompletterande kurs i cybersäkerhet och bygger kunskap inom riskhantering, incidenthantering och säkerhetsramverk.</p>
+                    </details>
                 </div>
+
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <span class="timeline-dot" aria-hidden="true"></span>
+                        <img src="assets/logos/TPlogo.svg" class="timeline-logo timeline-logo-teleperformance" alt="">
+                        <h3 class="timeline-title">Teleperformance</h3>
+                        <p class="timeline-date">2020–2025</p>
+                        <p class="timeline-assignment">
+                            <span class="timeline-assignment-title"><img src="assets/logos/Telialogo.svg" alt="" aria-hidden="true">Telia</span>
+                            <span data-i18n="teliaAssignment">B2B &amp; B2C</span>
+                        </p>
+                        <p class="timeline-assignment">
+                            <span class="timeline-assignment-title"><img src="assets/logos/IKEALogo.svg" alt="" aria-hidden="true">IKEA</span>
+                            <span>B2C</span>
+                        </p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-dot" aria-hidden="true"></span>
+                        <img src="assets/logos/chaslogo.png" class="timeline-logo chas-logo" alt="">
+                        <h3 class="timeline-title">Chas Academy</h3>
+                        <p class="timeline-date"><span data-i18n="courseName">Fullstack JavaScript</span><br>2025–2027</p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-dot" aria-hidden="true"></span>
+                        <span class="lia-mark" aria-hidden="true">✦</span>
+                        <h3 class="timeline-title">LIA</h3>
+                        <p class="timeline-company">Mentoris Solutions AB</p>
+                        <p class="timeline-duration" data-i18n="liaDuration">(6 månader)</p>
+                        <p class="timeline-date">2026–2027</p>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <!---EXPERIENCE--->
-            <section id="experience" class="section section-alt">
-      <div class="container">
-        <p class="section-eyebrow">Erfarenhet</p>
-        <h2 class="section-title reveal">Min resa</h2>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2017</span>
-              <h3 class="timeline-title">Gymnasieexamen</h3>
-              <p class="timeline-org">Samhällsorienterande programmet – inriktning Beteendevetenskap</p>
-              <p class="timeline-org">S:t Eriksgymnasium, Stockholm</p>
+        <section class="contact-section" id="kontakt" data-section="contact" aria-labelledby="contactTitle">
+            <div class="container contact-banner reveal">
+                <div>
+                    <h2 class="contact-title" id="contactTitle" data-i18n-html="contactTitle">Ska vi bygga<br>något tillsammans?</h2>
+                </div>
+                <p class="contact-copy" data-i18n="contactDescription">Jag är alltid nyfiken på nya idéer, samarbeten och spännande projekt.</p>
+                <a href="mailto:najah.mahmoud@hotmail.se" class="btn btn-primary">↗ &nbsp; <span data-i18n="contactMe">Kontakta mig</span></a>
             </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2018 – 2019</span>
-              <h3 class="timeline-title">Uppräkningspersonal</h3>
-              <p class="timeline-org"><img src="assets/logos/LoomisLogo.svg" class="timeline-logo" alt="" aria-hidden="true"> Loomis</p>
-              <p class="timeline-role-description">Arbete som uppräkningspersonal.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2018 – 2019</span>
-              <h3 class="timeline-title">Säkerhetskontrollant</h3>
-              <p class="timeline-org"><img src="assets/logos/nokaslogo.png" class="timeline-logo" alt="" aria-hidden="true"> Nokas (numera Avarn) — Arlanda Flygplats, Stockholm</p>
-              <p class="timeline-role-description">Arbete som säkerhetskontrollant på Flygplats.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Jan 2020 – 2025</span>
-              <h3 class="timeline-title">Senior Customer Advisor / Ops Customer Expert</h3>
-              <p class="timeline-org"><img src="assets/logos/TPlogo.svg" class="timeline-logo timeline-logo-teleperformance" alt="" aria-hidden="true">Teleperformance Nordic — uppdrag mot <img src="assets/logos/Telialogo.svg" class="timeline-logo" alt="" aria-hidden="true"> &amp; <img src="assets/logos/IKEALogo.svg" class="timeline-logo" alt="" aria-hidden="true"></p>
-              <ul class="timeline-list">
-                <li>Arbetsformer: Erfarenhet av kontorsarbete, distansarbete och hybridlösningar</li>
-                <li>Onboarding &amp; Coaching: Ansvarig för introduktion av nyanställda samt coachning för att driva sälj och nå KPI-mål</li>
-                <li>Resursplanering: Operativt arbete med schemaläggning och optimering av bemanning</li>
-                <li>Omnichannel-kommunikation: Löpande kundhantering via telefoni, chatt och mejl</li>
-                <li>IKEA (Kontor): Kundservice på plats, orderhantering, bokningar, reklamationer samt telefon- och mejlhantering</li>
-                <li>Telia (Kontor -> Distans/Hybrid): Teknisk support, försäljning, felavhjälpning och digital rådgivning via telefon, chatt och mejl</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2025 – 2027</span>
-              <h3 class="timeline-title">Fullstack JavaScript-student</h3>
-              <p class="timeline-org"><img src="assets/logos/chaslogo.png" class="timeline-logo timeline-logo-chas" alt="" aria-hidden="true"><a href="https://chasacademy.se/">Chas Academy</a></p>
-              <ul class="timeline-list">
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>React Native</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-                <li>UX/UI</li>
-                <li>Cybersäkerhet</li>
-                <li>Git/GitHub</li>
-                <li>Agila metoder</li>
-              </ul>
-              <article class="timeline-course">
-                <span class="timeline-date">Okt 2026 – Feb 2027</span>
-                <h4 class="timeline-course-title"><a href="https://chasacademy.se/program/praktisk-it-sakerhet-for-anvandare">Cybersäkerhet</a></h4>
-                <p class="timeline-org">Chas Academy | Kompletterande kurs</p>
-                <p class="timeline-course-description">Jag läser kursen och bygger kompetens inom:</p>
-                <ul class="timeline-list">
-                  <li>Cyberhot &amp; attackmetoder</li>
-                  <li>Riskhantering</li>
-                  <li>IT-säkerhet</li>
-                  <li>Incidenthantering</li>
-                  <li>Säkerhetskommunikation</li>
-                  <li>Compliance &amp; regelverk</li>
-                  <li>Säkerhetsramverk &amp; standarder</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <div class="quote-card reveal">
-          <p class="quote-title">Från kundservice till fullstack</p>
-          <p class="quote-text">Jag bytte inte ut problemlösningen.<br>Jag fick bara nya verktyg. ♡</p>
-        </div>
-      </div>
-    </section>
-    <!---CONTACT--->
-    
-    <section id="contact" class="contact">
-        <div class="container contact-inner reveal">
-            <h2 class="contact-title">Söker du/ni en driven lagspelare,<br>eller vill du bara ta en kopp te?</h2>
-
-                <p class="contact-text">Jag är öppen för nya möjligheter, 
-                samarbeten och bra samtal.</p>
-
-                <a href="mailto:najah.mahmoud@hotmail.se" class="btn btn-primary btn-large">Kontakta mig →</a>       
-        </div>
-    </section>
-
+        </section>
     </main>
 
-    <!---FOOTER--->
-
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <nav class="footer-social" aria-label="Sociala medier">
-                <ul class="footer-links">
-                    <li><a href="https://linkedin.com/in/najah-m-1687072a1" target="_blank" rel="noopener noreferrer"><img src="assets/icons/linkedin.png" alt="" aria-hidden="true">LinkedIn</a></li>
-                    <li><a href="https://github.com/NM-Codes" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github-icon.webp" alt="" aria-hidden="true">GitHub</a></li>
-                </ul>
+        <div class="container footer-inner">
+            <a href="#hem" class="footer-brand" aria-label="Till startsidan" data-i18n-aria-label="homeLink">
+                <img class="footer-monogram" src="assets/logos/logo-light.png" alt="">
+                <span>ENEM</span>
+            </a>
+            <nav class="footer-social" aria-label="Sociala medier" data-i18n-aria-label="socialLinks">
+                <a href="https://github.com/NM-Codes" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/najah-m-1687072a1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:najah.mahmoud@hotmail.se" data-i18n="email">E-post</a>
             </nav>
-
-            <p class="footer-copyright">© 2026 Najah Mahmaud</p>
-
-            <div class="footer-profile">
-                <div class="footer-name-row">
-                    <img class="footer-monogram" src="assets/images/nm-monogram.png" alt="">
-                    <p class="footer-name">Najah <span class="name-highlight">Mahmaud</span></p>
-                </div>
-                <p class="footer-role">Fullstack Utvecklare</p>
-                <p class="footer-scribble">"The only way to do great work<br>is to love what you do." — Steve Jobs ♡</p>
-            </div>
+            <p class="footer-copyright">© 2026 ENEM</p>
         </div>
     </footer>
 
+    <script src="translations/sv.js"></script>
+    <script src="translations/en.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
