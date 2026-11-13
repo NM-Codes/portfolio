@@ -23,6 +23,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hem" class="nav-link active" data-section-key="home" data-i18n="navHome">Hem</a></li>
                 <li><a href="#projekt" class="nav-link" data-section-key="projects" data-i18n="navProjects">Projekt</a></li>
+                <li><a href="#utveckling" class="nav-link" data-section-key="development" data-i18n="navDevelopment">Utveckling</a></li>
                 <li><a href="#erfarenhet" class="nav-link" data-section-key="experience" data-i18n="navExperience">Erfarenhet</a></li>
                 <li><a href="#om-mig" class="nav-link" data-section-key="about" data-i18n="navAbout">Om mig</a></li>
                 <li><a href="#kontakt" class="nav-link" data-section-key="contact" data-i18n="navContact">Kontakt</a></li>
@@ -146,6 +147,35 @@
                         </div>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="development-section section" id="utveckling" data-section="development" aria-labelledby="developmentTitle">
+            <div class="container development-layout">
+                <div class="development-copy">
+                    <p class="section-eyebrow development-eyebrow" data-i18n="developmentEyebrow">UTVECKLING</p>
+                    <h2 class="section-title development-title" id="developmentTitle" data-i18n="developmentTitle">Alltid utrymme att bli bättre.</h2>
+                    <p class="section-intro development-description" data-i18n="developmentDescription">Teknik står aldrig still. Jag gick tillbaka till min egen portfolio, utvärderade upplevelsen och byggde en ny version med tydligare struktur, mörkt läge och språkväxling.</p>
+                    <p class="development-quote">Build. Evaluate. Improve. Repeat.</p>
+                </div>
+                <figure class="development-media">
+                    <div class="development-video-frame">
+                        <div class="development-video-preview" id="developmentVideoPreview">
+                            <img class="development-before-image" src="assets/images/portfolio-before.jpg" alt="">
+                            <img class="development-after-image" src="assets/images/portfolio-after.jpg" alt="">
+                            <span class="development-video-label development-video-label-before" data-i18n="beforeLabel">BEFORE</span>
+                            <span class="development-video-label development-video-label-after" data-i18n="afterLabel">AFTER</span>
+                            <button class="development-play-button" id="developmentVideoPlay" type="button" aria-label="Spela upp videon" data-i18n-aria-label="playDevelopmentVideo">
+                                <span aria-hidden="true">▶</span>
+                            </button>
+                        </div>
+                        <video id="developmentVideo" controls preload="none" playsinline hidden aria-label="Portfolio under utveckling, före och efter" data-i18n-aria-label="developmentVideoLabel">
+                            <source src="assets/videos/portfolio-development.m4v" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="development-video-status" id="developmentVideoStatus" role="status" hidden data-i18n="videoUnsupported">Din webbläsare kan inte spela upp videon.</p>
+                    <figcaption data-i18n="developmentVideoCaption">Från första versionen till en mer genomarbetad upplevelse.</figcaption>
+                </figure>
             </div>
         </section>
 
