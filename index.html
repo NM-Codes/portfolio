@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,9 @@
 
             <div class="nav-controls">
                 <span class="language-pill" aria-label="Språk: svenska"><span aria-hidden="true">🇸🇪</span> SV</span>
-                <span class="theme-indicator" aria-label="Ljust läge" title="Ljust läge" aria-hidden="true">☼</span>
+                <button class="theme-indicator" id="themeToggle" type="button" aria-label="Aktivera mörkt läge" aria-pressed="false" title="Aktivera mörkt läge">
+                    <span aria-hidden="true">☾</span>
+                </button>
             </div>
 
             <button class="hamburger" id="hamburger" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="navLinks">
@@ -178,11 +180,11 @@
                 <ol class="timeline">
                     <li class="timeline-item">
                         <span class="timeline-dot" aria-hidden="true"></span>
-                        <img src="assets/logos/TPlogo.svg" class="timeline-logo" alt="">
+                        <img src="assets/logos/TPlogo.svg" class="timeline-logo timeline-logo-teleperformance" alt="">
                         <h3 class="timeline-title">Teleperformance</h3>
                         <p class="timeline-date">2020–2025</p>
                         <p class="timeline-assignment">
-                            <span class="timeline-assignment-title"><img src="assets/logos/Telialogo.svg" alt="" aria-hidden="true">Telia</span>
+                            <span class="timeline-assignment-title"><img src="assets/logos/Telialogo.svg" alt="" aria-hidden="true">Telia Company</span>
                             B2B &amp; B2C
                         </p>
                         <p class="timeline-assignment">

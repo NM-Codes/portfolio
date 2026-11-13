@@ -1,5 +1,27 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector("span");
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function setTheme(theme) {
+  const isDark = theme === "dark";
+  document.documentElement.dataset.theme = isDark ? "dark" : "light";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Aktivera ljust läge" : "Aktivera mörkt läge");
+  themeToggle.title = isDark ? "Aktivera ljust läge" : "Aktivera mörkt läge";
+  themeIcon.textContent = isDark ? "☼" : "☾";
+  themeColor.content = isDark ? "#11100f" : "#f7eee7";
+}
+
+const savedTheme = window.localStorage.getItem("portfolio-theme");
+setTheme(savedTheme === "dark" ? "dark" : "light");
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  window.localStorage.setItem("portfolio-theme", nextTheme);
+  setTheme(nextTheme);
+});
 
 navLinks.setAttribute("aria-hidden", String(window.innerWidth <= 680));
 
