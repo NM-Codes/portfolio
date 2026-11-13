@@ -79,6 +79,4 @@ Open `index.html` in your browser, or serve the folder with a static server such
 - [x] Page structure and styling
 - [x] Interactivity with vanilla JavaScript (mobile menu, active links, scroll reveal)
 - [x] Language toggle (Swedish / English)
-- [ ] Migrate to React and TypeScript
-- [ ] Extract reusable components
-- [ ] Add a React Native version in the same monorepo
+- [ ] Add a React Native version
